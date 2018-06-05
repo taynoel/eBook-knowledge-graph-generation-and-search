@@ -1,0 +1,39 @@
+//,general ontology;
+//,ic:questionContainer,ic:pictureContainer,ic:bookContainer,ic:conceptContainer;
+rdfs:domain,nt:isQuestionOf,ic:questionContainer;
+rdfs:subclassof,tc:book,ic:bookContainer;
+rdfs:subclassof,tc:chapter1,tc:book;
+
+
+//,owl:inverseof,nt:nextPage,nt:prevPage;
+//,owl:inverseof,nt:hasMaterial,nt:isContainedin;
+//,owl:inverseof,nt:hasQuestion,nt:isQuestionFor;
+//,owl:symmetricproperty,nt:isRelatedTo;
+//,rdfs:range,nt:hasQuestion,questions;
+//,rdfs:range,nt:nextPage,notes;
+//,rdfs:domain,nt:nextPage,notes;
+//,rdfs:range,nt:hasMaterial,materials;
+//,rdfs:subpropertyof,nt:hasMaterial,nt:isRelatedTo;
+
+
+//,topic hierarchy
+rdfs:subclassof,tc:turingModel,tc:chapter1;
+rdfs:subclassof,tc:vonNeumannModel,tc:chapter1;
+rdfs:subclassof,tc:computerComponents,tc:chapter1;
+rdfs:subclassof,tc:dataProcessors,tc:turingModel;
+rdfs:subclassof,tc:universalTuringMachine,tc:turingModel;
+
+
+
+//,Descriptions to descriptions
+nt:nextPage,o:descp:turingModel,o:descp:dataProcessors;
+nt:nextPage,o:descp:dataProcessors,o:descp:universalTuringMachine;
+nt:nextPage,o:descp:universalTuringMachine,o:descp:vonNeumannModel;
+
+
+//,Descriptions to topics
+rdf:type,o:descp:turingModel,tc:turingModel;
+rdf:type,o:descp:dataProcessors,tc:dataProcessors;
+rdf:type,o:descp:universalTuringMachine,tc:universalTuringMachine;
+rdf:type,o:descp:vonNeumannModel,tc:vonNeumannModel;
+
